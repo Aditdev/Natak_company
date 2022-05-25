@@ -1,30 +1,27 @@
 #include <stdio.h>
 
-/* Linear Search in array using C...
- Made By Aditya Lawate on 18/5/22
- at 22:46 pm.
+/* Bubble Sort in array using C...
+ Made By Aditya Lawate on 20/5/22
+ at 20:09 pm.
 */
-
 int main()
 {
-    int flag = 0, i, n;
-    int arr[] = {1, 96, 89, 23, 45, 67, 877, 654, 6543, 56, 76, 43};
-
-    printf("Enter a number to be searched:\n");
-    scanf("%d", &n);
-
-    for (i = 0; i < sizeof(arr) / sizeof(int); i++)
+    int temp, i, j;
+    int a[] = {1, 76, 54, 678, 544, 356, 5788, 2568, 244454, 76554, 3534, 3323, 565};
+    for (i = 0; i < sizeof(a) / sizeof(int); i++)
     {
-        if (arr[i] == n)
+        for (j = 0; j < sizeof(a) / sizeof(int); j++)
         {
-            flag = 1;
-            break;
+            if (a[j] > a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
         }
     }
 
-    if (flag == 0)
-        printf("-1");
-    else
-        printf("The Number %d was found at position %d", n, 1 + i);
+    for (i = 0; i < sizeof(a) / sizeof(int); i++)
+        printf("%d ", a[i]);
     return 0;
 }
