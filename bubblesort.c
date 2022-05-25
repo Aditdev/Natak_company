@@ -1,24 +1,30 @@
 #include <stdio.h>
+
+/* Linear Search in array using C...
+ Made By Aditya Lawate on 18/5/22
+ at 22:46 pm.
+*/
+
 int main()
 {
-    int arr[10],i,j,temp;
-    printf("Enter your 1D array");
-    for (i=0;i<10;i++)
-        scanf("%d",&arr[i]);
-        
-    for(i=0;i<10;i++){
-        for (j=0;j<10;j++){
-            if (arr[j+1]>arr[j])
-            temp=arr[j];
-            arr[j]=arr[j+1];
-            arr[j+1]=temp;
+    int flag = 0, i, n;
+    int arr[] = {1, 96, 89, 23, 45, 67, 877, 654, 6543, 56, 76, 43};
+
+    printf("Enter a number to be searched:\n");
+    scanf("%d", &n);
+
+    for (i = 0; i < sizeof(arr) / sizeof(int); i++)
+    {
+        if (arr[i] == n)
+        {
+            flag = 1;
+            break;
         }
     }
-    printf("Sorted array is \n");
-    for(i=0;i<10;i++){
-        printf("%d ",arr[i]);
-    }
+
+    if (flag == 0)
+        printf("-1");
+    else
+        printf("The Number %d was found at position %d", n, 1 + i);
+    return 0;
 }
-
-// Encountering some error pls help resolve it
-
