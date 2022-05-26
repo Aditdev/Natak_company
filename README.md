@@ -1,4 +1,4 @@
-# Natak_company
+# Here are some complex concepts and topics for DSA in C
 
 * I have made linear search using c 
 * Could you pls make one for binary search?
