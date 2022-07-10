@@ -22,7 +22,7 @@ int main()
         }
     }
 
-    for (i = 0; i < sizeof(a) / sizeof(int); i++)
+    for (i = 0; i < l; i++)
         printf("%d ", a[i]);
     return 0;
 }
